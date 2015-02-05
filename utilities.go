@@ -1,7 +1,13 @@
 package main
 
-func check(e error) {
+import (
+	"log"
+)
+
+func HasErr(e error) bool {
 	if e != nil {
-		panic(e)
+		log.Print(e)
+		return true
 	}
+	return false
 }

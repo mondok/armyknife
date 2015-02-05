@@ -17,7 +17,7 @@ func main() {
 		}
 		if c.Args()[0] == "db" {
 			ruby := RubyHelper{}
-			ruby.databaseyml()
+			ruby.Databaseyml()
 		}
 	}
 	app.Run(os.Args)
