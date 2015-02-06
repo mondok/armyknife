@@ -19,6 +19,11 @@ func main() {
 			ruby := RubyHelper{}
 			ruby.Databaseyml()
 		}
+
+		if c.Args()[0] == "rmdd" {
+			xc := XcodeHelper{}
+			xc.RemoveDerivedData()
+		}
 	}
 	app.Run(os.Args)
 }
