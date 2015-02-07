@@ -9,9 +9,9 @@ type XcodeHelper struct {
 	DerivedDataPath string
 }
 
-func NewXcodeHelper() XcodeHelper {
+func NewXcodeHelper() *XcodeHelper {
 	xch := XcodeHelper{"rm -rf ~/library/Developer/Xcode/DerivedData/*"}
-	return xch
+	return &xch
 }
 
 func (x XcodeHelper) RemoveDerivedData() {
