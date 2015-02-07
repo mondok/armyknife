@@ -5,10 +5,17 @@ import (
 	"os/exec"
 )
 
-type XcodeHelper struct{}
+type XcodeHelper struct {
+	DerivedDataPath string
+}
 
-func (XcodeHelper) RemoveDerivedData() {
-	log.Print("Removing derived data")
-	err := exec.Command("sh", "-c", "rm -rf ~/library/Developer/Xcode/DerivedData/*").Run()
+func NewXcodeHelper() XcodeHelper {
+	xch := XcodeHelper{"rm -rf ~/library/Developer/Xcode/DerivedData/*"}
+	return xch
+}
+
+func (x XcodeHelper) RemoveDerivedData() {
+	log.Print("Removing derived data from " + x.DerivedDataPath)
+	err := exec.Command("sh", "-c", x.DerivedDataPath).Run()
 	HasErr(err)
 }

@@ -21,7 +21,7 @@ func main() {
 		}
 
 		if c.Args()[0] == "rmdd" {
-			xc := XcodeHelper{}
+			xc := NewXcodeHelper()
 			xc.RemoveDerivedData()
 		}
 	}
