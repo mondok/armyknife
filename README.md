@@ -8,3 +8,6 @@ Random command line utilities for day to day work
 ## Commands
 `army-knife db`
 Lists out the current Rails development database
+
+`army-knife rmdd`
+Remove Xcode derived data
