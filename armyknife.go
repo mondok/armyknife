@@ -13,6 +13,7 @@ func main() {
 	app.Action = func(c *cli.Context) {
 		if !c.Args().Present() {
 			fmt.Print("You must pass in at least one argument")
+			fmt.Print("Current supported arguments are:  db, rmdd")
 			return
 		}
 		if c.Args()[0] == "db" {
