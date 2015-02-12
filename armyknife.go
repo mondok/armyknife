@@ -21,6 +21,11 @@ func main() {
 			ruby.Databaseyml()
 		}
 
+		if c.Args()[0] == "var" {
+			fle := NewFileHelper()
+			fle.printPath(c.Args().Get(1))
+		}
+
 		if c.Args()[0] == "rmdd" {
 			xc := NewXcodeHelper()
 			xc.RemoveDerivedData()
