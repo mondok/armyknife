@@ -11,3 +11,6 @@ Lists out the current Rails development database
 
 `army-knife rmdd`
 Remove Xcode derived data
+
+`army-knife var [ENVIRONMENT_VARIABLE_NAME]`
+Prints the value of an environment variable
