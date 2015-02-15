@@ -30,6 +30,15 @@ func main() {
 			xc := NewXcodeHelper()
 			xc.RemoveDerivedData()
 		}
+		if c.Args()[0] == "files" && c.Args()[1] == "-p" {
+			fle := NewFileHelper()
+			fle.prependValue = c.Args().Get(2)
+			fle.listAllFiles(c.Args().Get(3))
+		}
+		if c.Args()[0] == "files" {
+			fle := NewFileHelper()
+			fle.listAllFiles(c.Args().Get(1))
+		}
 	}
 	app.Run(os.Args)
 }

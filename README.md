@@ -14,3 +14,9 @@ Remove Xcode derived data
 
 `army-knife var [ENVIRONMENT_VARIABLE_NAME]`
 Prints the value of an environment variable
+
+`army-knife files [ROOT_DIRECTORY]`
+List all files and nested files starting at [ROOT_DIRECTORY]
+
+`army-knife files -p [PREPEND_TEXT] [ROOT_DIRECTORY]`
+List all files and nested files starting at [ROOT_DIRECTORY] and prepend [PREPEND_TEXT****]
