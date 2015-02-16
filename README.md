@@ -20,3 +20,10 @@ List all files and nested files starting at [ROOT_DIRECTORY]
 
 `army-knife files -p [PREPEND_TEXT] [ROOT_DIRECTORY]`
 List all files and nested files starting at [ROOT_DIRECTORY] and prepend [PREPEND_TEXT****]
+
+
+`army-knife dirs [ROOT_DIRECTORY]`
+List all directories and nested files starting at [ROOT_DIRECTORY]
+****
+`army-knife dirs -p [PREPEND_TEXT] [ROOT_DIRECTORY]`
+List all directories and nested files starting at [ROOT_DIRECTORY] and prepend [PREPEND_TEXT****]****

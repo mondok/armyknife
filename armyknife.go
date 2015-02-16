@@ -39,6 +39,16 @@ func main() {
 			fle := NewFileHelper()
 			fle.listAllFiles(c.Args().Get(1))
 		}
+
+		if c.Args()[0] == "dirs" && c.Args()[1] == "-p" {
+			fle := NewFileHelper()
+			fle.prependValue = c.Args().Get(2)
+			fle.listAllDirectories(c.Args().Get(3))
+		}
+		if c.Args()[0] == "dirs" {
+			fle := NewFileHelper()
+			fle.listAllDirectories(c.Args().Get(1))
+		}
 	}
 	app.Run(os.Args)
 }

@@ -21,14 +21,26 @@ func (f FileHelper) printPath(variableName string) {
 }
 
 func (f FileHelper) listAllFiles(path string) {
-	err := filepath.Walk(path, f.visit)
+	err := filepath.Walk(path, f.visitFile)
 	HasErr(err)
 }
 
-func (fh FileHelper) visit(path string, f os.FileInfo, err error) error {
+func (f FileHelper) listAllDirectories(path string) {
+	err := filepath.Walk(path, f.visitDir)
+	HasErr(err)
+}
+
+func (fh FileHelper) visitFile(path string, f os.FileInfo, err error) error {
 	if f.IsDir() {
 		return nil
 	}
 	fmt.Printf("%s %s\n", fh.prependValue, path)
+	return nil
+}
+
+func (fh FileHelper) visitDir(path string, f os.FileInfo, err error) error {
+	if f.IsDir() {
+		fmt.Printf("%s %s\n", fh.prependValue, path)
+	}
 	return nil
 }
