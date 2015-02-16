@@ -25,3 +25,6 @@ _testmain.go
 /config
 .DS_Store
 army-knife
+
+.idea/
+army-knife.iml
