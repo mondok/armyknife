@@ -16,6 +16,12 @@ func main() {
 			fmt.Print("Current supported arguments are:  db, rmdd")
 			return
 		}
+		if c.Args()[0] == "web" {
+			web := WebHelper{}
+			result := make(chan string, 1)
+			result <- web.downloadJson(c.Args().Get(1))
+			fmt.Println(<-result)
+		}
 		if c.Args()[0] == "db" {
 			ruby := RubyHelper{}
 			ruby.Databaseyml()

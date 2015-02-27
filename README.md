@@ -6,6 +6,9 @@ Random command line utilities for day to day work
 2.  `go install`
 
 ## Commands
+`army-knife web [URL]`
+Performs a GET on a webpage and returns the contents of the URL.  Same thing as cURL basically.
+
 `army-knife db`
 Lists out the current Rails development database
 
